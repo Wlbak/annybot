@@ -7,11 +7,11 @@
 
 #### 2、安装bot方法一、 在容器中使用命令
 ```shell
-cd config && rm -rf bot.sh && wget https://raw.githubusercontent.com/Annyoo2021/mybot/main/config/bot.sh && bash bot.sh && cd /jd/
+cd config && rm -rf bot.sh && wget https://raw.githubusercontent.com/xiaodan01/mybot/main/config/bot.sh && bash bot.sh && cd /jd/
 ```
 #### 3、安装bot方法二、 给机器人发消息
 ```text
-/cmd cd config && rm -rf bot.sh && wget https://raw.githubusercontent.com/Annyoo2021/mybot/main/config/bot.sh && bash bot.sh && cd /jd/
+/cmd cd config && rm -rf bot.sh && wget https://raw.githubusercontent.com/xiaodan01/mybot/main/config/bot.sh && bash bot.sh && cd /jd/
 ```
 
 #### 4、安装user，执行 /user 命令，按提示操作。
