@@ -15,6 +15,10 @@ async def mydownload(event):
     try:
         SENDER = event.sender_id
         furl = event.raw_text
+        if re.search(r'^https://github\.com/[\w-]+/[\w-]+/blob/([\w-]+/)+[\w\W]+\.(js|py|sh)$', furl):
+            findurl = re.findall(r'https://github\.com/(.+)blob/(.+)', furl)
+            re1, re2 = findurl[0][0], findurl[0][1]
+            furl = f"https://raw.githubusercontent.com/{re1}{re2}"
         if '下载代理' in mybot.keys() and str(mybot['下载代理']).lower() != 'false' and 'github' in furl:
             furl = f'{str(mybot["下载代理"])}/{furl}'
         try:
@@ -105,4 +109,3 @@ async def mydownload(event):
 
 if chname:
     jdbot.add_event_handler(mydownload, events.NewMessage(from_users=chat_id, pattern=mybot['命令别名']['cron']))
-
